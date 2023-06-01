@@ -19,7 +19,6 @@ import {
   useGLTF,
   PerspectiveCamera,
 } from '@react-three/drei';
-import { spawn } from 'child_process';
 
 export const ThreeDSandbox = () => {
   return (
@@ -37,7 +36,7 @@ export const ThreeDSandbox = () => {
             dignissimos ut modus.
           </p>
         </div>
-        <div className="flex items-center justify-center w-full h-full">
+        <div className="flex items-center justify-center w-full h-full cursor-grab active:cursor-grabbing">
           <AvatarCanvas />
         </div>
       </section>
