@@ -38,7 +38,7 @@ export const ThreeDSandbox = () => {
           </p>
         </div>
         <div className="flex items-center justify-center w-full h-full">
-          {/* <AvatarCanvas /> */}
+          <AvatarCanvas />
         </div>
       </section>
       <ClassNav />
@@ -137,20 +137,3 @@ function ClassNav() {
     </nav>
   );
 }
-
-/*
-[
-          <>
-            Systems <br /> Engineer
-          </>,
-          <>
-            Industrial <br /> Chemist
-          </>,
-          <>
-            Data <br /> Scientist
-          </>,
-          <>
-            Statistical <br /> Analyst
-          </>,
-        ]
-*/
