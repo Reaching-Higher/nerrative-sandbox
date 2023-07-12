@@ -18,9 +18,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  box-sizing: border-box;
   background: linear-gradient(
-      to bottom,
+    to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
@@ -29,6 +28,7 @@ body {
   }
   * {
     transition: all .1s;
+    box-sizing: border-box;
   }
   
 @layer utilities {
@@ -48,7 +48,7 @@ body {
 
    // HEADINGS
   .head-1 {
-    font-size: 84px !important;
+    font-size: 64px !important;
     line-height: 100%;
     @media (max-width: 1024px) {
     }
@@ -56,10 +56,10 @@ body {
     }
   }
   .head-2 {
-    font-size: 40px;
+    font-size: 32px;
   }
   .head-3 {
-    font-size: 32px;
+    font-size: 28px;
   }
   .head-1,
   .head-2,
@@ -69,7 +69,7 @@ body {
 
   // PARAGRAPH
   .par-1 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 125%;
   }
   .par-2 {
@@ -78,6 +78,11 @@ body {
   }
   
   // BUTTON
+  .button-1 {
+    text-transform: uppercase;
+    font-weight: semibold;
+    letter-spacing: 5px;
+  }
   
   // LINK
   .link-1 {
