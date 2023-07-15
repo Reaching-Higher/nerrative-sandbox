@@ -2,7 +2,7 @@ import { Share_Tech } from 'next/font/google';
 import localFont from 'next/font/local';
 
 const mbfPrime = localFont({
-  src: '../public/fonts/MBF_prime.otf',
+  src: '../public/fonts/MBF_Prime.otf',
   display: 'swap',
   variable: '--font-display',
 });
