@@ -20,6 +20,7 @@ module.exports = {
         light: '#E1E7F4',
         dark: '#2F333C',
         brand: '#361964',
+        darkgrey: '#D9D9D9',
         brandAccent: '#E47266',
         accent: '#EE4769'
       },
