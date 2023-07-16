@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  box-sizing: border-box;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    letter-spacing: -0.01rem;
+  }
+  * {
+    transition: all .1s;
+  }
+  
+@layer utilities {
+  .layout {
+    display: grid;
+    grid-template-columns:
+      1fr
+      min(1560px, 100%)
+      1fr;
+  }
+  .layout > * {
+    grid-column: 2;
+  }
+  .full-bleed {
+    grid-column: 1 / -1;
+  }
+
+   // HEADINGS
+  .head-1 {
+    font-size: 84px !important;
+    line-height: 100%;
+    @media (max-width: 1024px) {
+    }
+    @media (max-width: 592px) {
+    }
+  }
+  .head-2 {
+    font-size: 40px;
+  }
+  .head-3 {
+    font-size: 32px;
+  }
+  .head-1,
+  .head-2,
+  .head-3 {
+    text-transform: uppercase;
+  }
+
+  // PARAGRAPH
+  .par-1 {
+    font-size: 24px;
+    line-height: 125%;
+  }
+  .par-2 {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  
+  // BUTTON
+  
+  // LINK
+  .link-1 {
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: .2rem;
+  }
+}
