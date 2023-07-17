@@ -41,12 +41,3 @@ function HeroBGImage() {
     />
   );
 }
-
-
-{
-  /* <img
-            className="absolute h-full top-0 right-0 z-[-1]"
-            src="/backgrounds/hero-bg.png"
-            alt="cyberpunk girl in a futuristic city"
-          /> */
-}
