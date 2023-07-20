@@ -1,4 +1,4 @@
-# WF Component Build! #
+# PHASE I: WF Component Build! #
 
 Your task here is to code out a version of the wireframe included in this folder.
 
@@ -14,3 +14,26 @@ Your task here is to code out a version of the wireframe included in this folder
 - You do not need to make this responsive, desktop view is fine for now.
 - Notice that the current layout has a dark background - you will need to adapt the colors in the WF so that they are appropriate for dark mode.
 - The sizes of each element don't need to be pixel perfect, but try to keep a similar alignment between the elements.
+
+
+
+# PHASE II: Adding TypeScript #
+
+In this phase of the process, I'd like you to add TypeScript to your component. 
+
+> Instructions:
+
++ Part 1 +
+
+1. Remove the @ts-nocheck comment from the top of your component file. This will cause the TS compiler to highlight any existing issues with your code.
+2. Pull the most recent changes to the repo. This will include an API route that I've constructed, from which you will pull data that will act as the content for your component.
+3. You will need to figure out how to get the data from the internal API into your component. I suggest the next.js documentation as a first resort.
+4. Define an interface for the data that comes in from the fetch request. This interface will need to have the same shape as the data that comes back from the API. I'll leave it to you to figure out where to add these types 😉.
+
++ Part II + 
+
+1. Because the data that will provide the text content for each card is now in the form of an array, you'll need to restructure your component so that it can render this data. For this step, I want you to create a separate component beneath your main component that accepts one of the objects from the array that comes in from the fetch request.
+> Notes:
+- Construct the new component such that it uses the same interface you defined for the data that comes back from the fetch request.
+- This component should include any applicable styling.
+- Remember that some objects in the array include extra properties. Use conditional logic to deal with this.
