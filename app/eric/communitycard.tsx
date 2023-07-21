@@ -62,7 +62,7 @@ const EricCommunitySection = () => {
           </p>
         </div>
 
-        <div class={`flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark`}>
+        <div className="flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
           <h2 className="mb-4 text-4xl  font-body">
             New Arrivals 
            <p className="text-xl text-left  font-body">
@@ -71,8 +71,8 @@ const EricCommunitySection = () => {
           </h2> 
 
         </div>
-
-        <div class={`flex flex-col col-span-3 row-span-2 items-left  p-4 justify-left-top sm:col-span-2 md:col-span-3 text-dark hover:text-white bg-darkgrey hover:bg-dark`}>
+     
+        <div className="flex flex-col col-span-3 row-span-2 items-left p-4 justify-left-top sm:col-span-2 md:col-span-3 text-dark hover:text-white bg-darkgrey hover:bg-dark">
           <h2 className="mb-4 text-4xl font-body">
             Join A Collective
           </h2>
@@ -86,12 +86,12 @@ const EricCommunitySection = () => {
 
         </div>
 
-        <div class={`flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark`}>
+        <div className="`flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
           <h2 className="text-4xl font-body">
             Topic Forums
             </h2>  
             <p className="text-xl text-left font-body">
-           <br /> <Link href="/whereever">Learn More &ensp; →</Link>
+           <br /> <Link href="/whereever">Learn More &ensp;→</Link>
           </p>
               
       
@@ -99,12 +99,12 @@ const EricCommunitySection = () => {
 
         {/*  Hover effect  */}
       
-        <div class={`flex flex-col col-span-2  items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark`}>
-          <h2 class={`mb-4 text-4xl font-body`}>
+        <div className="flex flex-col col-span-2  items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
+          <h2 className="mb-4 text-4xl font-body">
             Class Forum
           </h2>
-          <p class={`text-xl text-left font-body`}>
-            <Link href="/whereever">Learn More&ensp; →</Link>
+          <p className="text-xl text-left font-body">
+            <Link href="/whereever">Learn More &ensp; →</Link>
           </p>
         </div>
       </div>
