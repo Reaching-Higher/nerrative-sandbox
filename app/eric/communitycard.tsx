@@ -66,7 +66,7 @@ const EricCommunitySection = () => {
           <h2 className="mb-4 text-4xl  font-body">
             New Arrivals 
            <p className="text-xl text-left  font-body">
-                 <br /> <Link href="/whereever">Learn More &nbsp; →</Link> 
+                 <br /> <Link href="/whereever">Learn More &ensp; →</Link> 
           </p>
           </h2> 
 
@@ -81,7 +81,7 @@ const EricCommunitySection = () => {
                Nerrative members and forge your path together.
           </p>
             <p className="text-xl text-left  font-body">
-            <br /> <Link href="/whereever">Learn More &nbsp; →</Link> 
+            <br /> <Link href="/whereever">Learn More &ensp; →</Link> 
           </p>
 
         </div>
@@ -91,7 +91,7 @@ const EricCommunitySection = () => {
             Topic Forums
             </h2>  
             <p className="text-xl text-left font-body">
-           <br /> <Link href="/whereever">Learn More &nbsp; →</Link>
+           <br /> <Link href="/whereever">Learn More &ensp; →</Link>
           </p>
               
       
@@ -104,7 +104,7 @@ const EricCommunitySection = () => {
             Class Forum
           </h2>
           <p class={`text-xl text-left font-body`}>
-            <Link href="/whereever">Learn More  &nbsp; →</Link>
+            <Link href="/whereever">Learn More&ensp; →</Link>
           </p>
         </div>
       </div>
