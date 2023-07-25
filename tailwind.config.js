@@ -5,7 +5,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -15,17 +14,17 @@ module.exports = {
       },
       fontFamily: {
         display: ['var(--font-display)'],
-        body: ['var(--font-body)']
+        body: ['var(--font-body)'],
       },
       colors: {
-        text: 'var(--color-text)',
-        bg: 'var(--color-bg)',
-        brand: 'var(--color-brand)',
-        darkgrey: 'var(--color-darkgrey)',
-        brandAccent: 'var(--color-brandAccent)',
-        accent: 'var(--color-accent)'
+        light: '#E1E7F4',
+        dark: '#2F333C',
+        brand: '#361964',
+        darkgrey: '#D9D9D9',
+        brandAccent: '#E47266',
+        accent: '#EE4769'
       },
     },
   },
   plugins: [],
-}
+};
