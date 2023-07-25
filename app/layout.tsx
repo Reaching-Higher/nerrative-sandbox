@@ -38,7 +38,7 @@ export default function RootLayout({
     <AppProvider>
       <html lang="en" className={`${mbfPrime.variable} ${shareTech.variable}`}>
         <body className="relative h-screen dark">
-          <main className="z-10 h-full layout">{children}</main>
+          <main className="z-10 h-full layout flex flex-col gap-[100px]">{children}</main>
           <div className="z-[-1] fixed inset-0 h-full">
             <div className="h-full w-full absolute bg-[purple] opacity-[.1]" />
             <img
