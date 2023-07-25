@@ -46,11 +46,6 @@ export default function RootLayout({
               src="/backgrounds/glass-overlay__16-9.svg"
               alt="bg image"
             />
-            {/* <img
-            className="absolute h-full top-0 right-0 z-[-1]"
-            src="/backgrounds/hero-bg.png"
-            alt="cyberpunk girl in a futuristic city"
-          /> */}
             <img
               className="absolute h-full w-full inset-0 z-[-2]"
               src="/backgrounds/nebula-bg.png"
