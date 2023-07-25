@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { observer } from '@legendapp/state/react';
-import { Legend } from '@legendapp/state/react-components';
 import { useContact } from '../_context/app.context';
 
 const Contact = () => {
