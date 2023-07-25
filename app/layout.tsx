@@ -6,7 +6,7 @@ import { AppProvider } from './_context/app.context';
 import './globals.scss'
 
 const mbfPrime = localFont({
-  src: '../public/fonts/MBF_Prime.otf',
+  src: 'fonts/MBF_Prime.otf',
   display: 'swap',
   variable: '--font-display',
 });
