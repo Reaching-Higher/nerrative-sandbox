@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -10,44 +16,23 @@
   }
 }
 
-@layer base {
-  :root {
-    // CUSTOM COLORS
-    --color-accent: "#EE4769";
-    --color-text: "#E1E7F4";
-    --color-bg: "#2F333C";
-    --color-med: "#D9D9D9";
-    --color-brand: "#361964";
-    --color-brandAccent: "#E47266";
-  }
-  .light {
-    // CUSTOM COLORS
-    --color-accent: "#EE4769";
-    --color-text: "#E1E7F4";
-    --color-bg: "#2F333C";
-    --color-med: "#D9D9D9";
-    --color-brand: "#361964";
-    --color-brandAccent: "#E47266";
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
-  box-sizing: border-box;
   background: linear-gradient(
-      to bottom,
+    to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  letter-spacing: -0.01rem;
-}
-* {
-  transition: all 0.1s;
-  box-sizing: border-box;
-}
+    letter-spacing: -0.01rem;
+  }
+  * {
+    transition: all .1s;
+    box-sizing: border-box;
+  }
 
 @layer utilities {
+
   // LAYOUT
   .layout {
     display: grid;
@@ -62,22 +47,36 @@ body {
   .full-bleed {
     grid-column: 1 / -1;
   }
+  .flex-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-section {
+    height: 65vh;
+    width: 100%;
+    @media (max-width: 1024px) {
+    }
+    @media (max-width: 592px) {
+    }
+  }
 
-  // HEADINGS
+   // HEADINGS
   .head-1 {
-    font-size: 84px !important;
+    font-size: 64px !important;
     line-height: 100%;
-    letter-spacing: 5px;
     @media (max-width: 1024px) {
     }
     @media (max-width: 592px) {
     }
   }
   .head-2 {
-    font-size: 40px;
+    font-size: 32px;
   }
   .head-3 {
-    font-size: 32px;
+    font-size: 28px;
   }
   .head-1,
   .head-2,
@@ -87,20 +86,25 @@ body {
 
   // PARAGRAPH
   .par-1 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 125%;
   }
   .par-2 {
     font-size: 16px;
     line-height: 100%;
   }
-
+  
   // BUTTON
-
+  .button-1 {
+    text-transform: uppercase;
+    font-weight: semibold;
+    letter-spacing: 5px;
+  }
+  
   // LINK
   .link-1 {
     font-size: 20px;
     line-height: 125%;
-    letter-spacing: 0.2rem;
+    letter-spacing: .2rem;
   }
 }
