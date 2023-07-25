@@ -27,7 +27,7 @@ const CommunityCard = () => {
           // ^ Also use w-full here. 
           // ^ As mentioned, h-720px looks good, but relative units will protect us better. 
         */}
-        <div className="bg-slate-900 flex flex-col col-span-3 row-span-2 p-4 border-2 border-solid justify-center-top items-left sm:col-span-2 md:col-span-3 border-dark">
+        <div className="flex flex-col col-span-3 row-span-2 p-4 border-2 border-solid justify-center-top items-left sm:col-span-2 md:col-span-3 border-dark">
           {/* 
             // ^ This is more of a design issue, but outline-black is not visible 
             // ^ against the BG. See figma comments for more on this.
@@ -46,7 +46,7 @@ const CommunityCard = () => {
           </p>
         </div>
 
-        <div className="bg-slate-900 flex flex-col justify-center col-span-2 p-4 bg-white border-2 border-solid items-left border-dark">
+        <div className="flex flex-col justify-center col-span-2 p-4 border-2 border-solid items-left border-dark">
           <h2 className="mb-4 text-4xl text-dark font-body">
             Nerrative Community Forums
           </h2>
