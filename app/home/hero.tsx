@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const Hero = () => {
   return (
-    <section className="relative flex h-screen flex-col items-center justify-center pt-[10rem]">
+    <section className="relative flex h-screen flex-col items-center justify-center pt-[10rem] full-bleed">
       <HeroText />
       <HeroBGImage />
     </section>
@@ -11,7 +11,7 @@ export const Hero = () => {
 
 function HeroText() {
   return (
-    <div className="flex flex-col items-center justify-center gap-[65px]">
+    <div className="z-10 flex flex-col items-center justify-center gap-[65px]">
       <h1 className="flex items-center justify-center">
         <img src="/text/nerrative-hero-text.png" />
       </h1>
@@ -34,10 +34,17 @@ function HeroText() {
 
 function HeroBGImage() {
   return (
-    <img
-      className="absolute h-full top-0 right-0 z-[-1]"
-      src="/backgrounds/hero-bg.png"
-      alt="cyberpunk girl in a futuristic city"
-    />
+    <>
+      <img
+        className="absolute h-full top-0 right-0 z-[1] opacity-[.5]"
+        src="/backgrounds/glass-overlay__16-9.svg"
+        alt="cyberpunk girl in a futuristic city"
+      />
+      <img
+        className="absolute h-full top-0 right-0 z-[0]"
+        src="/backgrounds/hero-bg.png"
+        alt="cyberpunk girl in a futuristic city"
+      />
+    </>
   );
 }
