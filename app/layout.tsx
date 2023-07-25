@@ -1,5 +1,3 @@
-'use client';
-
 import { Share_Tech } from 'next/font/google';
 import localFont from 'next/font/local';
 
