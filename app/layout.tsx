@@ -7,6 +7,12 @@ import { AppProvider } from './_context/app.context';
 
 import './globals.scss'
 
+const mbfPrime = localFont({
+  src: '../public/fonts/MBF_Prime.otf',
+  display: 'swap',
+  variable: '--font-display',
+});
+
 const shareTech = Share_Tech({
   weight: ['400'],
   subsets: ['latin'],
