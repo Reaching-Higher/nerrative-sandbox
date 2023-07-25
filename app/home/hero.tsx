@@ -13,7 +13,7 @@ function HeroText() {
   return (
     <div className="flex flex-col items-center justify-center gap-[65px]">
       <h1 className="flex items-center justify-center">
-        <img src="/assets/nerrative-hero-text.png" />
+        <img src="/text/nerrative-hero-text.png" />
       </h1>
       <div className="flex flex-col items-center justify-center gap-[25px]">
         <h2 className="uppercase text-[54px] font-body tracking-[11.5px]">
