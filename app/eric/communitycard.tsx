@@ -15,19 +15,20 @@ import Link from 'next/link';
 
 */
 
-const CommunityCard = () => {
+
+const EricCommunitySection = () => {
   return (
     <div className="flex items-center justify-center w-full uppercase">
       {/* 
         // ^ The width here is governed by the layout that contains all pages. 
         // ^ Use "w-full" here instead.
       */}
-      <div className="grid w-full grid-cols-5 gap-[10px] grid-rows-4 gap-1 ">
+      <div className="grid grid-cols-5 grid-rows-4 gap-1 w-full">
         {/* 
           // ^ Also use w-full here. 
           // ^ As mentioned, h-720px looks good, but relative units will protect us better. 
         */}
-        <div className="flex flex-col col-span-3 row-span-2 p-4 border-2 border-solid justify-center-top items-left sm:col-span-2 md:col-span-3 border-dark">
+        <div className="flex flex-col col-span-3 row-span-2 p-4 bg-white justify-center-top items-left sm:col-span-2 md:col-span-3 border-solid border-2 border-dark">
           {/* 
             // ^ This is more of a design issue, but outline-black is not visible 
             // ^ against the BG. See figma comments for more on this.
@@ -36,70 +37,74 @@ const CommunityCard = () => {
             Get Involved In The Nerrative Community
           </h1>
           <p className="text-left text-3xl text-dark max-w-[80%] font-body">
+        
             {/* So like here I tried to use the same color in the WF 
             for the text and from my view, the text kept disappearing 
             so It seem slike the silver is too light on top of the white
             I'm not sure whats going going  here 
             So I ended up using the dark, instead.
             */}
+
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
 
-        <div className="flex flex-col justify-center col-span-2 p-4 border-2 border-solid items-left border-dark">
+        <div className="flex flex-col justify-center col-span-2 p-4 bg-white items-left border-solid border-2 border-dark">
           <h2 className="mb-4 text-4xl text-dark font-body">
             Nerrative Community Forums
           </h2>
           <p className="text-left text-md text-dark max-w-[70%] font-body normal-case">
-            Nunc augue augue, efficitur vel ipsum eget, imperdiet hendrerit
-            tellus.
-            <p className="text-xl text-left text-dark font-body">
-              <br /> <Link href="/whereever">View all &ensp; →</Link>
+          Nunc augue augue, efficitur vel ipsum eget, imperdiet hendrerit tellus. 
+          <p className="text-xl text-left text-dark font-body">
+            <br /> <Link href="/whereever">View all &ensp; →</Link> 
             </p>
+
           </p>
         </div>
 
-        <div
-          class={`bg-slate-700 flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark`}
-        >
+        <div className="flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
+          <h2 className="mb-4 text-4xl  font-body">
+            New Arrivals 
+           <p className="text-xl text-left  font-body">
+                 <br /> <Link href="/whereever">Learn More &ensp; →</Link> 
+          </p>
+          </h2> 
+
+        </div>
+     
+        <div className="flex flex-col col-span-3 row-span-2 items-left p-4 justify-left-top sm:col-span-2 md:col-span-3 text-dark hover:text-white bg-darkgrey hover:bg-dark">
           <h2 className="mb-4 text-4xl font-body">
-            New Arrivals
-            <p className="text-xl text-left font-body">
-              <br /> <Link href="/whereever">Learn More &nbsp; →</Link>
-            </p>
+            Join A Collective
           </h2>
+           <p className="text-lg text-left  font-body normal-case">
+               Create or join a collective group with other <br />
+               Nerrative members and forge your path together.
+          </p>
+            <p className="text-xl text-left  font-body">
+            <br /> <Link href="/whereever">Learn More &ensp; →</Link> 
+          </p>
+
         </div>
 
-        <div
-          class={`flex flex-col col-span-3 row-span-2 items-left  p-4 justify-left-top sm:col-span-2 md:col-span-3 text-dark hover:text-white bg-slate-700 hover:bg-dark`}
-        >
-          <h2 className="mb-4 text-4xl font-body">Join A Collective</h2>
-          <p className="text-lg text-left normal-case font-body">
-            Create or join a collective group with other <br />
-            Nerrative members and forge your path together.
+        <div className="`flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
+          <h2 className="text-4xl font-body">
+            Topic Forums
+            </h2>  
+            <p className="text-xl text-left font-body">
+           <br /> <Link href="/whereever">Learn More &ensp;→</Link>
           </p>
-          <p className="text-xl text-left font-body">
-            <br /> <Link href="/whereever">Learn More &nbsp; →</Link>
-          </p>
-        </div>
-
-        <div
-          class={`bg-slate-700 flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark`}
-        >
-          <h2 className="text-4xl font-body">Topic Forums</h2>
-          <p className="text-xl text-left font-body">
-            <br /> <Link href="/whereever">Learn More &nbsp; →</Link>
-          </p>
+              
+      
         </div>
 
         {/*  Hover effect  */}
-
-        <div
-          class={`bg-slate-700 flex flex-col col-span-2  items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark`}
-        >
-          <h2 class={`mb-4 text-4xl font-body`}>Class Forum</h2>
-          <p class={`text-xl text-left font-body`}>
-            <Link href="/whereever">Learn More &nbsp; →</Link>
+      
+        <div className="flex flex-col col-span-2  items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
+          <h2 className="mb-4 text-4xl font-body">
+            Class Forum
+          </h2>
+          <p className="text-xl text-left font-body">
+            <Link href="/whereever">Learn More &ensp; →</Link>
           </p>
         </div>
       </div>
@@ -107,4 +112,4 @@ const CommunityCard = () => {
   );
 };
 
-export default CommunityCard;
+export default EricCommunitySection;
