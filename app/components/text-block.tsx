@@ -46,7 +46,7 @@ function Divider({ color = 'var(--color-accent)' }: { color: string }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <line x1="680" y1="1" y2="1" stroke="#EE4669" stroke-width="2" />
+        <line x1="680" y1="1" y2="1" stroke="#EE4669" strokeWidth="2" />
         <path
           d="M0 0H78.336V0C78.336 2.20914 76.5451 4 74.336 4H4C1.79086 4 0 2.20914 0 0V0Z"
           fill="#EE4669"
@@ -77,9 +77,9 @@ function ActionButton({ text, color }: IActionButton) {
             d="M13.5 11L18 15.5L13.5 20"
             // stroke='var(--color-accent)'
             stroke="#EE4669"
-            stroke-width="0.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="0.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M29 15C29 22.732 22.732 29 15 29C7.26801 29 1 22.732 1 15C1 7.26801 7.26801 1 15 1"
