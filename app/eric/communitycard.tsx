@@ -1,5 +1,7 @@
-// @ts-nocheck
-import React from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
+import { NextPage } from 'next';
 import Link from 'next/link';
 
 /*
@@ -15,97 +17,95 @@ import Link from 'next/link';
 
 */
 
+// Created the Interface to define types
+interface CommunityCardItem {
+  title: string;
+  blurb?: string;
+  link?: string;
+  buttonText?: string;
+}
 
-const EricCommunitySection = () => {
+//Fetching data here from the API using async
+
+const EricCommunitySection: NextPage = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/community'); // Fetch data from the API route
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="flex items-center justify-center w-full uppercase">
-      {/* 
-        // ^ The width here is governed by the layout that contains all pages. 
-        // ^ Use "w-full" here instead.
-      */}
-      <div className="grid grid-cols-5 grid-rows-4 gap-1 w-full">
-        {/* 
-          // ^ Also use w-full here. 
-          // ^ As mentioned, h-720px looks good, but relative units will protect us better. 
-        */}
-        <div className="flex flex-col col-span-3 row-span-2 p-4 bg-white justify-center-top items-left sm:col-span-2 md:col-span-3 border-solid border-2 border-dark">
-          {/* 
-            // ^ This is more of a design issue, but outline-black is not visible 
-            // ^ against the BG. See figma comments for more on this.
-          */}
-          <h1 className="mb-4 text-6xl col-span-2 max-w-[80%] text-dark font-body">
-            Get Involved In The Nerrative Community
-          </h1>
-          <p className="text-left text-3xl text-dark max-w-[80%] font-body">
-        
-            {/* So like here I tried to use the same color in the WF 
-            for the text and from my view, the text kept disappearing 
-            so It seem slike the silver is too light on top of the white
-            I'm not sure whats going going  here 
-            So I ended up using the dark, instead.
-            */}
+    <div className="flex items-center justify-between w-full uppercase">
+      <div className="grid grid-cols-[.6fr_.4fr] gap-1 w-full">
+        {/* Left Column of Card using 60% width */}
+        {/*Sliced mapped array into two  & reworked cards to map out array*/}
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
-
-        <div className="flex flex-col justify-center col-span-2 p-4 bg-white items-left border-solid border-2 border-dark">
-          <h2 className="mb-4 text-4xl text-dark font-body">
-            Nerrative Community Forums
-          </h2>
-          <p className="text-left text-md text-dark max-w-[70%] font-body normal-case">
-          Nunc augue augue, efficitur vel ipsum eget, imperdiet hendrerit tellus. 
-          <p className="text-xl text-left text-dark font-body">
-            <br /> <Link href="/whereever">View all &ensp; →</Link> 
+        <div className="grid grid-cols-1 grid-rows-2 gap-1">
+          <div className="flex flex-col col-span-3 row-span-1 p-4 bg-white justify-center-top items-left sm:col-span-3 md:col-span-3 border-solid border-1 border-dark">
+            <h1 className="mb-4 text-6xl col-span-2 max-w-[80%] text-dark font-body">
+              Get Involved In The Nerrative Community
+            </h1>
+            <p className="text-left text-3xl text-dark max-w-[80%] font-body">
+              {/* So like here I tried to use the same color in the WF 
+         for the text and from my view, the text kept disappearing 
+         so It seem slike the silver is too light on top of the white
+         I'm not sure whats going going  here 
+         So I ended up using the dark, instead.
+         */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
+          </div>
 
-          </p>
+          {data.slice(0, 1).map((item, index) => (
+            <div
+              key={index}
+              className={`flex flex-col col-span-3 row-span-2 p-4 justify-between-top items-left sm:col-span-3 md:col-span-3 text-dark hover:text-white bg-darkgrey hover:bg-dark border-solid border-1 border-dark`}
+            >
+              {/* Replace using jsx style sheet  `custom-item-style` with desired class names, if needed (optional) */}
+              <h2 className="mb-4 text-4xl font-body">{item.title}</h2>
+              {item.blurb && (
+                <p className="text-xl text-left font-body">{item.blurb}</p>
+              )}
+              {item.link && (
+                <p className="text-xl text-left font-body">
+                  <br /> <Link href={item.link}>{item.buttonText}</Link>
+                </p>
+              )}
+            </div>
+          ))}
         </div>
 
-        <div className="flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
-          <h2 className="mb-4 text-4xl  font-body">
-            New Arrivals 
-           <p className="text-xl text-left  font-body">
-                 <br /> <Link href="/whereever">Learn More &ensp; →</Link> 
-          </p>
-          </h2> 
+        {/* Right Column (40% width) */}
 
-        </div>
-     
-        <div className="flex flex-col col-span-3 row-span-2 items-left p-4 justify-left-top sm:col-span-2 md:col-span-3 text-dark hover:text-white bg-darkgrey hover:bg-dark">
-          <h2 className="mb-4 text-4xl font-body">
-            Join A Collective
-          </h2>
-           <p className="text-lg text-left  font-body normal-case">
-               Create or join a collective group with other <br />
-               Nerrative members and forge your path together.
-          </p>
-            <p className="text-xl text-left  font-body">
-            <br /> <Link href="/whereever">Learn More &ensp; →</Link> 
-          </p>
+        <div className="grid grid-cols-[.6fr_.4fr] grid-rows-1 gap-1">
+          {data.slice(1, 6).map((item, index) => (
+            <div
+              key={index}
+              className={`flex flex-col col-span-3 row-span-2 p-4 justify-center-top items-left sm:col-span-2 md:col-span-3 text-dark hover:text-white bg-darkgrey  hover:bg-dark border-solid border-1 border-dark`}
+            >
+              {/* Replace using jsx style sheet  `custom-item-style` with desired class names, if needed (optional) */}
 
-        </div>
-
-        <div className="`flex flex-col col-span-2 row-span-1 items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
-          <h2 className="text-4xl font-body">
-            Topic Forums
-            </h2>  
-            <p className="text-xl text-left font-body">
-           <br /> <Link href="/whereever">Learn More &ensp;→</Link>
-          </p>
-              
-      
-        </div>
-
-        {/*  Hover effect  */}
-      
-        <div className="flex flex-col col-span-2  items-left justify-left p-4  text-dark hover:text-white bg-darkgrey hover:bg-dark">
-          <h2 className="mb-4 text-4xl font-body">
-            Class Forum
-          </h2>
-          <p className="text-xl text-left font-body">
-            <Link href="/whereever">Learn More &ensp; →</Link>
-          </p>
+              <h2 className="mb-4 text-4xl font-body">{item.title}</h2>
+              {item.blurb && (
+                <p className="text-xl text-left font-body">{item.blurb}</p>
+              )}
+              {item.link && (
+                <p className="text-xl text-left font-body">
+                  <br /> <Link href={item.link}>{item.buttonText}</Link>
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
