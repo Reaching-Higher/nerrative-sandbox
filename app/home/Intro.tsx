@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TextBlock } from '../components/text-block'
+import { TextBlock } from '../_components/text-block'
 
 export const Intro = () => {
   return (
