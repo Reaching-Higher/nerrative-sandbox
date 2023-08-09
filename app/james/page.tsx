@@ -36,6 +36,7 @@ const JamesCommunitySection = async () => {
     <section className="flex-container font-body">
       <div className="page-section grid grid-flow-col grid-cols-[.6fr_.4fr] grid-rows-[.4fr_.2fr_.2fr_.2fr] gap-[10px]">
         <TitleCard />
+        <h2>{process.env.BASE_URL}</h2>
         {/* {cards.map((card: ILinkCard) => (
           <LinkCard card={card} />
         ))} */}
