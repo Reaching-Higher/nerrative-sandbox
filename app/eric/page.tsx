@@ -35,6 +35,7 @@ import EricCommunitySection from './communitycard';
 const App = () => {
   return (
     <div className="flex">
+      {/* @ts-expect-error Server Component */}
       <EricCommunitySection />
     </div>
   );
