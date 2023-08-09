@@ -24,8 +24,9 @@ const JamesCommunitySection = async () => {
     # In the production app we would move the below to a utils folder
     # so that it can be shared throughout the app.
   */
-  const data: Response = await fetch('http://localhost:3000/api/community-eric');
+  const data: Response = await fetch('http://localhost:3000/api/community-james');
   const cards: ILinkCard[] = await data.json();
+  console.log('cards: ', cards);
 
   return (
     <section className="flex-container font-body">
@@ -62,7 +63,7 @@ function LinkCard({ card }: { card: ILinkCard }) {
   return (
     <Link
       href={link}
-      className={`px-8 py-4 uppercase flex flex-col items-start justify-between bg-brand/50 cursor-pointer hover:!bg-light hover:text-[black] ${classes}`}
+      className={`px-8 py-4 uppercase flex flex-col items-start justify-between bg-brand bg-opacity-25 cursor-pointer hover:!bg-light hover:text-[black] ${classes}`}
     >
       <div className="flex flex-col items-start gap-[15px] ">
         <h4 className="head-3">{title}</h4>

@@ -17,17 +17,17 @@ const EricCommunitySection: NextPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/api/community-eric');
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch('/api/community-eric');
+    //     const jsonData = await response.json();
+    //     setData(jsonData);
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //   }
+    // };
 
-    fetchData();
+    // fetchData();
   }, []);
 
   return (
@@ -43,7 +43,7 @@ const EricCommunitySection: NextPage = () => {
             </p>
           </div>
 
-          {data.slice(0, 1).map((item: ICommunityCardItem, index) => {
+          {/* {data.slice(0, 1).map((item: ICommunityCardItem, index) => {
             return (
               <div
                 key={index}
@@ -60,12 +60,12 @@ const EricCommunitySection: NextPage = () => {
                 )}
               </div>
             );
-          })}
+          })} */}
         </div>
 
 
         <div className="grid grid-cols-[.6fr_.4fr] grid-rows-1 gap-1">
-          {data.slice(1, 6).map((item: ICommunityCardItem, index) => {
+          {/* {data.slice(1, 6).map((item: ICommunityCardItem, index) => {
             return (
               <div
                 key={index}
@@ -82,7 +82,7 @@ const EricCommunitySection: NextPage = () => {
                 )}
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
     </div>

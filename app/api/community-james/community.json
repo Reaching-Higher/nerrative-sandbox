@@ -4,7 +4,7 @@
     "blurb": "Create or join a collective group with other Nerrative members and forge your path together.",
     "buttonText": "Learn More →",
     "link": "/",
-    "classes": "row-span-2 col-span-2 bg-brand",
+    "classes": "row-span-2 !bg-brand/30",
     "titleClasses": "!head-2"
   },
   {
@@ -12,7 +12,7 @@
     "blurb": "Nunc augue augue, efficitur vel ipsum eget, imperdiet hendrerit tellus. ",
     "buttonText": "View All →",
     "link": "/",
-    "classes": "bg-brand",
+    "classes": "bg-brand col-span-1",
     "titleClasses": "!head-2"
   },
   {
