@@ -1,17 +1,26 @@
 [
   {
+    "title": "Get involved in the Nerrative Community",
+    "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "classes": "row-span-2 col-span-2 !bg-brand !bg-opacity-30",
+    "titleClasses": "!head-1",
+    "paraClasses": "!head-2"
+  },
+  {
     "title": "Join a collective",
     "blurb": "Create or join a collective group with other Nerrative members and forge your path together.",
     "buttonText": "Learn More →",
     "link": "/",
-    "classes": "row-span-2 bg-[#361964]"
+    "classes": "row-span-2 col-span-2 bg-brandAccent",
+    "titleClasses": "!head-2"
   },
   {
     "title": "Nerrative community forums",
     "blurb": "Nunc augue augue, efficitur vel ipsum eget, imperdiet hendrerit tellus. ",
     "buttonText": "View All →",
     "link": "/",
-    "classes": "border !bg-[transparent] hover:!border-brand"
+    "classes": "bg-brandAccent",
+    "titleClasses": "!head-2"
   },
   {
     "title": "New Arrivals",

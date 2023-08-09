@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx,json}',
   ],
   theme: {
     extend: {
@@ -22,7 +23,7 @@ module.exports = {
         brand: '#361964',
         darkgrey: '#D9D9D9',
         brandAccent: '#E47266',
-        accent: '#EE4769'
+        accent: '#EE4769',
       },
     },
   },

@@ -11,12 +11,24 @@ const mbfPrime = localFont({
   variable: '--font-display',
 });
 
-const shareTech = Share_Tech({
-  weight: ['400'],
-  subsets: ['latin'],
-  display: 'swap',  
+const shareTech = localFont({
+  src: './_fonts/ShareTech.ttf',
+  display: 'swap',
   variable: '--font-body',
 });
+
+const rajdhani = localFont({
+  src: './_fonts/Rajdhani.ttf',
+  display: 'swap',
+  variable: '--font-body_alt',
+});
+
+// const shareTech = Share_Tech({
+//   weight: ['400'],
+//   subsets: ['latin'],
+//   display: 'swap',  
+//   variable: '--font-body',
+// });
 
 import './globals.scss';
 
@@ -34,7 +46,7 @@ export default function RootLayout({
 
   return (
     <AppProvider>
-      <html lang="en" className={`${mbfPrime.variable} ${shareTech.variable}`}>
+      <html lang="en" className={`${mbfPrime.variable} ${shareTech.variable} ${rajdhani.variable}`}>
         <body className="relative h-screen dark">
           <main className="z-10 h-full layout flex flex-col gap-[100px]">{children}</main>
           <div className="z-[-1] fixed inset-0 h-full">
