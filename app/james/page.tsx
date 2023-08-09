@@ -28,8 +28,8 @@ const getCardData = async () => {
 };
 
 const JamesCommunitySection = async () => {
-  // const cards: any = await getCardData()
-  // console.log('_______cards_______: ', cards);
+  const cards: any = await getCardData()
+  console.log('_______cards_______: ', cards);
   console.log('env var: ', process.env.BASE_URL);
 
   return (
