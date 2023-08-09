@@ -15,11 +15,17 @@ interface ILinkCard {
   # Note that we need to define this component as async in order 
   # to perform a fetch request inside it.
 */
-const JamesCommunitySection = async () => {
+// const cards: ILinkCard[] = await data.json();
+const getCardData = async () => {
   const data: Response = await fetch(`${process.env.API_URL}community-james`);
   const cards: any = await data.text();
+  
+  return cards
+}
+
+const JamesCommunitySection = async () => {
+  const cards: any = await getCardData()
   console.log('cards: ', cards);
-  // const cards: ILinkCard[] = await data.json();
 
   return (
     <section className="flex-container font-body">
