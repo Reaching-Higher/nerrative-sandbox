@@ -16,7 +16,7 @@ interface ILinkCard {
   # to perform a fetch request inside it.
 */
 const JamesCommunitySection = async () => {
-  const data: Response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-james`);
+  const data: Response = await fetch(`${process.env.API_URL}community-james`);
   const cards: any = await data.text();
   console.log('cards: ', cards);
   // const cards: ILinkCard[] = await data.json();
