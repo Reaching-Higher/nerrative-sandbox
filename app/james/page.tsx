@@ -16,17 +16,16 @@ interface ILinkCard {
   # to perform a fetch request inside it.
 */
 const JamesCommunitySection = async () => {
-  // const data: Response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-james`);
-  // const cards: ILinkCard[] = await data.json();
-  // console.log('cards: ', cards);
+  const data: Response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-james`);
+  const cards: ILinkCard[] = await data.json();
 
   return (
     <section className="flex-container font-body">
       <div className="page-section grid grid-flow-col grid-cols-[.6fr_.4fr] grid-rows-[.4fr_.2fr_.2fr_.2fr] gap-[10px]">
         <TitleCard />
-        {/* {cards.map((card: ILinkCard) => (
+        {cards.map((card: ILinkCard) => (
           <LinkCard card={card} />
-        ))} */}
+        ))}
       </div>
     </section>
   );
