@@ -21,7 +21,7 @@ interface ILinkCard {
 
 
 const getCardData = async () => {
-  const data: Response = await fetch(`${process.env.API_URL}community-james`);
+  const data: Response = await fetch(`${process.env.BASE_URL}api/community-james`);
   const cards: any = await data.json();
 
   return cards;
