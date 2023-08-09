@@ -1,3 +1,5 @@
+// 'use client';
+
 import Link from 'next/link';
 import React from 'react';
 
@@ -16,24 +18,26 @@ interface ILinkCard {
   # to perform a fetch request inside it.
 */
 // const cards: ILinkCard[] = await data.json();
+
+
 const getCardData = async () => {
   const data: Response = await fetch(`${process.env.API_URL}community-james`);
-  const cards: any = await data.text();
-  
-  return cards
-}
+  const cards: any = await data.json();
+
+  return cards;
+};
 
 const JamesCommunitySection = async () => {
   const cards: any = await getCardData()
-  console.log('cards: ', cards);
+  console.log('_______cards_______: ', cards);
 
   return (
     <section className="flex-container font-body">
       <div className="page-section grid grid-flow-col grid-cols-[.6fr_.4fr] grid-rows-[.4fr_.2fr_.2fr_.2fr] gap-[10px]">
         <TitleCard />
-        {/* {cards.map((card: ILinkCard) => (
+        {cards.map((card: ILinkCard) => (
           <LinkCard card={card} />
-        ))} */}
+        ))}
       </div>
     </section>
   );
