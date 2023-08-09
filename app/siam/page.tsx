@@ -14,7 +14,7 @@ export interface ICommunityDataTypes {
 
 async function getCommunityData() {
   try {
-    const res = await fetch('http://localhost:3000/api/community-siam');
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-eric`);
     if (!res.ok) {
       throw new Error('Error fetching community data.');
     }

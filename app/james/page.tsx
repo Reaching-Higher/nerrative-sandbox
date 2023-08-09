@@ -16,25 +16,17 @@ interface ILinkCard {
   # to perform a fetch request inside it.
 */
 const JamesCommunitySection = async () => {
-  /*
-    # In Next 13.4 all components run on server instead of client 
-    # unless 'use client' is written at the top of the file.
-    # This means that we can fetch directly inside the component without
-    # the need for a useEffect.
-    # In the production app we would move the below to a utils folder
-    # so that it can be shared throughout the app.
-  */
-  const data: Response = await fetch('http://localhost:3000/api/community-james');
-  const cards: ILinkCard[] = await data.json();
-  console.log('cards: ', cards);
+  // const data: Response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-james`);
+  // const cards: ILinkCard[] = await data.json();
+  // console.log('cards: ', cards);
 
   return (
     <section className="flex-container font-body">
       <div className="page-section grid grid-flow-col grid-cols-[.6fr_.4fr] grid-rows-[.4fr_.2fr_.2fr_.2fr] gap-[10px]">
         <TitleCard />
-        {cards.map((card: ILinkCard) => (
+        {/* {cards.map((card: ILinkCard) => (
           <LinkCard card={card} />
-        ))}
+        ))} */}
       </div>
     </section>
   );

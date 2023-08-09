@@ -19,14 +19,13 @@ const EricCommunitySection: NextPage = () => {
   useEffect(() => {
     // const fetchData = async () => {
     //   try {
-    //     const response = await fetch('/api/community-eric');
+    //     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-eric`);
     //     const jsonData = await response.json();
     //     setData(jsonData);
     //   } catch (error) {
     //     console.error('Error fetching data:', error);
     //   }
     // };
-
     // fetchData();
   }, []);
 
