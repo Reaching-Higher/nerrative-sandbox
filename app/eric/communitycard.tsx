@@ -1,9 +1,4 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { NextPage } from 'next';
 import Link from 'next/link';
-
 
 interface ICommunityCardItem {
   title: string;
@@ -12,22 +7,17 @@ interface ICommunityCardItem {
   buttonText?: string;
 }
 
+const getCardData = async () => {
+  const data: Response = await fetch(
+    `${process.env.BASE_URL}api/community-james`
+  );
+  const cards: any = await data.json();
 
-const EricCommunitySection: NextPage = () => {
-  const [data, setData] = useState([]);
+  return cards;
+};
 
-  useEffect(() => {
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-eric`);
-    //     const jsonData = await response.json();
-    //     setData(jsonData);
-    //   } catch (error) {
-    //     console.error('Error fetching data:', error);
-    //   }
-    // };
-    // fetchData();
-  }, []);
+const EricCommunitySection = async () => {
+  const cardData: ICommunityCardItem[] = await getCardData();
 
   return (
     <div className="flex items-center justify-between w-full uppercase">
@@ -42,7 +32,7 @@ const EricCommunitySection: NextPage = () => {
             </p>
           </div>
 
-          {/* {data.slice(0, 1).map((item: ICommunityCardItem, index) => {
+          {cardData.slice(0, 1).map((item: ICommunityCardItem, index) => {
             return (
               <div
                 key={index}
@@ -59,12 +49,12 @@ const EricCommunitySection: NextPage = () => {
                 )}
               </div>
             );
-          })} */}
+          })}
         </div>
 
 
         <div className="grid grid-cols-[.6fr_.4fr] grid-rows-1 gap-1">
-          {/* {data.slice(1, 6).map((item: ICommunityCardItem, index) => {
+          {cardData.slice(1, 6).map((item: ICommunityCardItem, index) => {
             return (
               <div
                 key={index}
@@ -81,7 +71,7 @@ const EricCommunitySection: NextPage = () => {
                 )}
               </div>
             );
-          })} */}
+          })}
         </div>
       </div>
     </div>
