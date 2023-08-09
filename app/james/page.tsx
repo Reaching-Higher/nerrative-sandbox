@@ -1,10 +1,7 @@
-// 'use client';
-
 import Link from 'next/link';
 import React from 'react';
 
 
-// Define your interface
 interface ILinkCard {
   title: string,
   blurb?: string, // ? Denotes an optional property
@@ -12,13 +9,6 @@ interface ILinkCard {
   link: string,
   classes?: string
 }
-
-/*
-  # Note that we need to define this component as async in order 
-  # to perform a fetch request inside it.
-*/
-// const cards: ILinkCard[] = await data.json();
-
 
 const getCardData = async () => {
   const data: Response = await fetch(`${process.env.BASE_URL}api/community-james`);
@@ -28,18 +18,15 @@ const getCardData = async () => {
 };
 
 const JamesCommunitySection = async () => {
-  const cards: any = await getCardData()
-  console.log('_______cards_______: ', cards);
-  console.log('env var: ', process.env.BASE_URL);
+  const cards: ILinkCard[] = await getCardData()
 
   return (
     <section className="flex-container font-body">
       <div className="page-section grid grid-flow-col grid-cols-[.6fr_.4fr] grid-rows-[.4fr_.2fr_.2fr_.2fr] gap-[10px]">
         <TitleCard />
-        <h2>{process.env.BASE_URL}</h2>
-        {/* {cards.map((card: ILinkCard) => (
+        {cards.map((card: ILinkCard) => (
           <LinkCard card={card} />
-        ))} */}
+        ))}
       </div>
     </section>
   );
@@ -56,11 +43,6 @@ function TitleCard() {
   );
 }
 
-/*
-  # React components receive an argument 'props', from which we typically
-  # destructure individual props by name. When we add types to this, we
-  # need to mirror that destructuring in the type assignment as below.
-*/
 function LinkCard({ card }: { card: ILinkCard }) {
 
   const { title, blurb, buttonText, link, classes } = card ?? '';
