@@ -28,16 +28,17 @@ const getCardData = async () => {
 };
 
 const JamesCommunitySection = async () => {
-  const cards: any = await getCardData()
-  console.log('_______cards_______: ', cards);
+  // const cards: any = await getCardData()
+  // console.log('_______cards_______: ', cards);
+  console.log('env var: ', process.env.BASE_URL);
 
   return (
     <section className="flex-container font-body">
       <div className="page-section grid grid-flow-col grid-cols-[.6fr_.4fr] grid-rows-[.4fr_.2fr_.2fr_.2fr] gap-[10px]">
         <TitleCard />
-        {cards.map((card: ILinkCard) => (
+        {/* {cards.map((card: ILinkCard) => (
           <LinkCard card={card} />
-        ))}
+        ))} */}
       </div>
     </section>
   );
