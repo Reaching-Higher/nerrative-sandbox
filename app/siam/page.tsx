@@ -14,7 +14,7 @@ export interface ICommunityDataTypes {
 
 async function getCommunityData() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}community-eric`);
+    const res = await fetch(`${process.env.BASE_URL}api/community-siam`);
     if (!res.ok) {
       throw new Error('Error fetching community data.');
     }
@@ -25,13 +25,14 @@ async function getCommunityData() {
 }
 
 export default async function SiamCommunitySection() {
-  // const communityData = await getCommunityData();
+  const communityData = await getCommunityData();
+  console.log('communityData: ', communityData);
   return (
     <section className="flex items-center justify-center w-full font-body text-light">
       <div className="w-5/6 h-4/5 grid grid-flow-col grid-rows-4 grid-cols-3 gap-1.5">
-        {/* {communityData.map((data: ICommunityDataTypes, idx: number) => (
+        {communityData.map((data: ICommunityDataTypes, idx: number) => (
           <CommunityCard data={{ ...data, idx }} />
-        ))} */}
+        ))}
       </div>
     </section>
   );
