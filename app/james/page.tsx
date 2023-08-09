@@ -24,7 +24,7 @@ const JamesCommunitySection = async () => {
     # In the production app we would move the below to a utils folder
     # so that it can be shared throughout the app.
   */
-  const data: Response = await fetch('http://localhost:3000/api/community');
+  const data: Response = await fetch('http://localhost:3000/api/community-eric');
   const cards: ILinkCard[] = await data.json();
 
   return (
