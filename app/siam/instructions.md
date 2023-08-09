@@ -37,3 +37,18 @@ In this phase of the process, I'd like you to add TypeScript to your component.
 - Construct the new component such that it uses the same interface you defined for the data that comes back from the fetch request.
 - This component should include any applicable styling.
 - Remember that some objects in the array include extra properties. Use conditional logic to deal with this.
+
+
+# PHASE III: Responsive Components #
+
+In this phase of the process, I'd like you to make your component responsive to different screen sizes.
+
+> Instructions:
+
+1. You should see two new wireframes in your folder. Add styling to your component that matches these wireframes at the appropriate screen sizes.
+2. Add to, or rewrite your tailwind classes so that when the screen size shrinks towards mobile, everything retains its proportion. When the size of the viewport reaches the specified breakpoint, it should restructure itself to match the new wireframes. 
+
+
+> Notes:
+- The layout is also responsive and should accommodate varying screen sizes.
+- This should be a fairly easy one!
